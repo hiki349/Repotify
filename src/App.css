@@ -5,11 +5,9 @@
 html,
 body,
 :root {
-  height: 100%;
-  background-color: black;
-  color-scheme: dark;
+  @apply h-full bg-black;
 }
 
 #root {
-  height: 100%;
+  @apply h-full;
 }

@@ -1,5 +1,3 @@
-import style from './MainPage.module.css';
+import Sidebar from '@common/Sidebar/Sidebar';
 
-import { SideBar } from '../../components/SideBar';
-
-export const MainPage = () => <SideBar>Main page</SideBar>;
+export const MainPage = () => <Sidebar>Main page</Sidebar>;
