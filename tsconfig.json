@@ -15,9 +15,11 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "@common/*": ["./common/*"],
+      "@common": ["./common"],
       "@pages": ["./pages"],
-      "@utils/*": ["./utils/*"]
+      "@layouts": ["./layouts"],
+      "@utils/*": ["./utils/*"],
+      "@static/*": ["./static/*"]
     },
     /* Linting */
     "strict": true,
