@@ -8,7 +8,9 @@ export default defineConfig({
     alias: {
       '@common': '/src/common',
       '@pages': '/src/pages',
-      '@utils': '/src/utils'
+      '@layouts': '/src/layouts',
+      '@utils': '/src/utils',
+      '@static': '/src/static'
     }
   }
 });
