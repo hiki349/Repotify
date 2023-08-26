@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 
 import Box from '@common/Box/Box';
 import CustomLink from '@common/CustomLink/CustomLink';
+import Library from '@common/Library/Library';
 
 import styles from './Sidebar.module.css';
-import Library from '@common/Library/Library';
 
 interface SidebarProps {
   children?: React.ReactNode;
@@ -23,7 +23,7 @@ const Sidebar: FC<SidebarProps> = ({ children }) => (
           {/* Icon search */}
         </CustomLink>
       </Box>
-      <Box>
+      <Box className={styles.library}>
         <Library />
       </Box>
     </div>

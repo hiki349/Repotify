@@ -1,7 +1,9 @@
 import React, { Children, FC, ReactNode } from 'react';
-import styles from './Header.module.css';
 import { useNavigate } from 'react-router-dom';
+
 import Button from '@common/Button/Button';
+
+import styles from './Header.module.css';
 
 interface HeaderProps {
   children: ReactNode;
