@@ -1,8 +1,9 @@
 import { FC } from 'react';
 
-import styles from './Library.module.css';
 import Button from '@common/Button/Button';
 import CustomLink from '@common/CustomLink/CustomLink';
+
+import styles from './Library.module.css';
 
 interface LibraryProps {}
 

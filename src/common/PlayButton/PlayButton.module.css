@@ -1,0 +1,3 @@
+.PlayButton {
+  @apply flex translate-x-5 translate-y-1/4 items-center justify-center rounded-full bg-green-500 p-4 opacity-100 drop-shadow-md transition hover:scale-110 group-hover:translate-x-0 group-hover:opacity-100;
+}
