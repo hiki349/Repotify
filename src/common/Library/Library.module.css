@@ -1,3 +1,55 @@
-.Library {
+.library {
   @apply flex h-full flex-col;
+}
+
+.library_header {
+  @apply flex items-center justify-between px-5 pt-4;
+}
+
+.library_header__container {
+  @apply inline-flex items-center gap-x-2;
+}
+
+.library_header__title {
+  @apply font-medium text-neutral-400;
+}
+
+.library_header__button {
+  @apply cursor-pointer text-neutral-400 transition hover:text-white;
+}
+
+.library_body {
+  @apply flex h-full flex-col justify-between;
+}
+
+.library_main {
+  @apply flex flex-1 flex-col gap-6 py-5;
+}
+
+.library_main__container {
+  @apply flex flex-col gap-2 rounded-lg bg-neutral-700 px-5 py-4 text-white;
+}
+
+.library_main__title {
+  @apply font-bold;
+}
+
+.library_main__text {
+  @apply text-xs;
+}
+
+.library_main__button {
+  @apply mt-3 w-fit bg-white text-black !important;
+}
+
+.library_footer {
+  @apply justify-between px-3 py-4;
+}
+
+.library_footer__wrapper {
+  @apply flex flex-row flex-wrap gap-x-5 gap-y-2 py-6 text-[11px];
+}
+
+.library_footer__button {
+  @apply flex w-fit border-neutral-400 px-4 py-1 text-white;
 }

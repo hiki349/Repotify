@@ -9,38 +9,35 @@ interface LibraryProps {}
 
 const Library: FC<LibraryProps> = () => {
   const onClick = () => {
-    console.log('click');
+    // console.log('click');
   };
 
   return (
-    <div className={styles.Library}>
-      <div className='flex items-center justify-between px-5 pt-4'>
-        <div className='inline-flex items-center gap-x-2'>
+    <div className={styles.library}>
+      <div className={styles.library_header}>
+        <div className={styles.library_header__container}>
           {/* Icon library */}
-          <p className='text-md font-medium text-neutral-400'>Your Library</p>
+          <p className={styles.library_header__title}>Your Library</p>
         </div>
-        <button
-          onClick={onClick}
-          className='cursor-pointer text-neutral-400 transition hover:text-white'
-        >
+        <button onClick={onClick} className={styles.library_header__button}>
           +
         </button>
       </div>
-      <section className='flex flex-col justify-between'>
-        <main className='flex flex-1 flex-col gap-6 py-5'>
-          <div className='flex flex-col gap-2 rounded-lg bg-neutral-700 px-5 py-4 text-white'>
-            <h1 className='font-bold'>Create your first playlist</h1>
-            <p className='text-xs'>It`s easy, we`ll help you</p>
-            <Button className='mt-3 w-fit bg-white text-black'>Create playlist</Button>
+      <section className={styles.library_body}>
+        <main className={styles.library_main}>
+          <div className={styles.library_main__container}>
+            <h1 className={styles.library_main__title}>Create your first playlist</h1>
+            <p className={styles.library_main__text}>It`s easy, we`ll help you</p>
+            <Button className={styles.library_main__button}>Create playlist</Button>
           </div>
-          <div className='flex flex-col gap-2 rounded-lg bg-neutral-700 px-5 py-4 text-white'>
-            <h1 className='font-bold'>Let`s find some podcasts to follow</h1>
-            <p className='text-xs'>We`ll keep you updated on new episodes</p>
-            <Button className='mt-3 w-fit bg-white text-black'>Browse podcasts</Button>
+          <div className={styles.library_main__container}>
+            <h1 className={styles.library_main__title}>Let`s find some podcasts to follow</h1>
+            <p className={styles.library_main__text}>We`ll keep you updated on new episodes</p>
+            <Button className={styles.library_main__button}>Browse podcasts</Button>
           </div>
         </main>
-        <footer className='px-3 pt-4'>
-          <div className='flex flex-row flex-wrap gap-x-5 gap-y-2 py-6 text-[11px]'>
+        <footer className={styles.library_footer}>
+          <div className={styles.library_footer__wrapper}>
             <CustomLink href='https://www.spotify.com/ua-en/legal/end-user-agreement/'>
               Legal
             </CustomLink>
@@ -58,7 +55,7 @@ const Library: FC<LibraryProps> = () => {
               Accessability
             </CustomLink>
           </div>
-          <Button className='flex w-fit border-neutral-400 px-4 py-1 text-white'>
+          <Button className={styles.library_footer__button}>
             {/* <span>icon language</span> */}
             English
           </Button>
