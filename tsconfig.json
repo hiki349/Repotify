@@ -15,7 +15,7 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "@common": ["./common"],
+      "@common/*": ["./common/*"],
       "@pages": ["./pages"],
       "@layouts": ["./layouts"],
       "@utils/*": ["./utils/*"],
@@ -27,9 +27,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "src",
-    "@types/*.d.ts"
-  ],
+  "include": ["src", "@types/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
