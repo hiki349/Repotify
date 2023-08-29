@@ -14,11 +14,11 @@ const Sidebar: FC<SidebarProps> = ({ children }) => (
   <div className={styles.Sidebar}>
     <div className={styles.sidebar__container}>
       <Box className={styles.nav}>
-        <CustomLink href='/'>
+        <CustomLink path='/'>
           Home
           {/* Icon home */}
         </CustomLink>
-        <CustomLink href='/search'>
+        <CustomLink path='/search'>
           Search
           {/* Icon search */}
         </CustomLink>

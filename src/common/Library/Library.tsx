@@ -38,20 +38,20 @@ const Library: FC<LibraryProps> = () => {
         </main>
         <footer className={styles.library_footer}>
           <div className={styles.library_footer__wrapper}>
-            <CustomLink href='https://www.spotify.com/ua-en/legal/end-user-agreement/'>
+            <CustomLink path='https://www.spotify.com/ua-en/legal/end-user-agreement/'>
               Legal
             </CustomLink>
-            <CustomLink href='https://www.spotify.com/ua-en/privacy'>Privacy Center</CustomLink>
-            <CustomLink href='https://www.spotify.com/ua-en/legal/privacy-policy/'>
+            <CustomLink path='https://www.spotify.com/ua-en/privacy'>Privacy Center</CustomLink>
+            <CustomLink path='https://www.spotify.com/ua-en/legal/privacy-policy/'>
               Privacy Policy
             </CustomLink>
-            <CustomLink href='https://www.spotify.com/ua-en/legal/cookies-policy/'>
+            <CustomLink path='https://www.spotify.com/ua-en/legal/cookies-policy/'>
               Cookies
             </CustomLink>
-            <CustomLink href='https://www.spotify.com/ua-en/legal/privacy-policy/#s3'>
+            <CustomLink path='https://www.spotify.com/ua-en/legal/privacy-policy/#s3'>
               About ads
             </CustomLink>
-            <CustomLink href='https://www.spotify.com/ua-en/accessibility'>
+            <CustomLink path='https://www.spotify.com/ua-en/accessibility'>
               Accessability
             </CustomLink>
           </div>

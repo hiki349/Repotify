@@ -5,12 +5,12 @@ import styles from './CustomLink.module.css';
 
 interface CustomLinkProps {
   children: ReactNode;
-  href: string;
+  path: string;
 }
 
-const CustomLink: FC<CustomLinkProps> = ({ children, href }) => (
+const CustomLink: FC<CustomLinkProps> = ({ children, path }) => (
   <NavLink
-    to={href}
+    to={path}
     className={({ isActive }) => (isActive ? `text-white ${styles.customLink}` : styles.customLink)}
   >
     {children}
