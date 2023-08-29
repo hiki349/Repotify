@@ -1,4 +1,4 @@
-import React, { Children, FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Button from '@common/Button/Button';
@@ -7,43 +7,37 @@ import styles from './Header.module.css';
 
 interface HeaderProps {
   children: ReactNode;
-  className?: string;
+  // className?: string;
 }
 
-const Header: FC<HeaderProps> = ({ children, className }) => {
+const Header: FC<HeaderProps> = ({ children }) => {
   const navigate = useNavigate();
 
-  const handleLogOut = () => {};
+  // const handleLogOut = () => {};
   return (
-    <div className='h-fit p-1'>
-      <div className='mb-4 flex w-full items-center justify-between'>
-        <div className='hidden items-center gap-x-2 md:flex'>
-          <button
-            onClick={() => navigate(-1)}
-            className='flex h-5 w-5 items-center justify-center rounded-full bg-black p-4 text-white transition hover:opacity-75'
-          >
+    <div className={styles.header}>
+      <div className={styles.header_wrapper}>
+        <div className={styles.header_stepper}>
+          <Button onClick={() => navigate(-1)} className={styles.header_stepper__button}>
             &#60;
             {/* Icon arrow left */}
-          </button>
-          <button
-            onClick={() => navigate(1)}
-            className='flex h-5 w-5 items-center justify-center rounded-full bg-black p-4 text-white transition hover:opacity-75'
-          >
+          </Button>
+          <Button onClick={() => navigate(1)} className={styles.header_stepper__button}>
             &#62;
             {/* Icon arrow right */}
-          </button>
+          </Button>
         </div>
-        <div className='flex items-center gap-x-2 md:hidden'>
-          <button className='flex items-center justify-center  rounded-full bg-white p-2 transition hover:opacity-75'>
+        <div className={styles.header_mobile}>
+          <Button className={styles.header_mobile__button}>
             {/* Icon home */}
             Home
-          </button>
-          <button className='flex items-center justify-center  rounded-full bg-white p-2 transition hover:opacity-75'>
+          </Button>
+          <Button className={styles.header_mobile__button}>
             {/* Icon search */}
             Search
-          </button>
+          </Button>
         </div>
-        <div className='flex items-center justify-between gap-x-4'>
+        <div className={styles.header_auth}>
           {/* <div>
             <Button className='bg-white text-black'>Premium</Button>
           </div>
@@ -51,15 +45,12 @@ const Header: FC<HeaderProps> = ({ children, className }) => {
             <Button>Sign up</Button>
           </div> */}
           <div>
-            <Button
-              onClick={() => {}}
-              className='bg-transparent font-medium text-neutral-300 hover:text-white'
-            >
+            <Button onClick={() => {}} className={styles.header_auth__signup}>
               Sign up
             </Button>
           </div>
           <div>
-            <Button onClick={() => {}} className='bg-white font-medium text-black'>
+            <Button onClick={() => {}} className={styles.header_auth__login}>
               Sign in
             </Button>
           </div>

@@ -1,1 +1,35 @@
-.Header {}
+.header {
+  @apply h-fit p-1;
+}
+
+.header_wrapper {
+  @apply mb-4 flex w-full items-center justify-between;
+}
+
+.header_stepper {
+  @apply hidden items-center gap-x-2 md:flex;
+}
+
+.header_stepper__button {
+  @apply flex h-5 w-5 items-center justify-center rounded-full bg-black p-4 text-white transition hover:opacity-75;
+}
+
+.header_mobile {
+  @apply flex items-center gap-x-2 md:hidden;
+}
+
+.header_mobile__button {
+  @apply flex items-center justify-center rounded-full bg-white p-2 transition hover:opacity-75;
+}
+
+.header_auth {
+  @apply flex items-center justify-between gap-x-4;
+}
+
+.header_auth__signup {
+  @apply bg-transparent font-medium text-neutral-300 hover:text-white;
+}
+
+.header_auth__login {
+  @apply bg-white font-medium text-black;
+}
