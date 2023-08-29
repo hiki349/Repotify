@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import Button from '@common/Button/Button';
+import image from '@static/images/image-1.jpg';
 
 import styles from './Card.module.css';
 
@@ -9,7 +10,7 @@ interface CardProps {}
 const Card: FC<CardProps> = () => (
   <div className={`group ${styles.card} `}>
     <div className={styles.card_image}>
-      <img src='../../../public/static/images/image-1.jpg' alt='song-1' />
+      <img src={image} alt='song-1' />
     </div>
     <div className={styles.card_content}>
       <p className={styles.card_content__title}>All Out 80s</p>
