@@ -8,7 +8,7 @@ interface BoxProps {
 }
 
 const Box: FC<BoxProps> = ({ children, className }) => (
-  <div className={`${className} ${styles.Box}`}>{children}</div>
+  <div className={`${className} ${styles.box}`}>{children}</div>
 );
 
 export default Box;

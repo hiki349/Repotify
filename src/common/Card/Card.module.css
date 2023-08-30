@@ -7,7 +7,7 @@
 }
 
 .card_content {
-  @apply flex w-full flex-col items-start gap-y-1 pt-4;
+  @apply flex h-auto w-full flex-col items-start gap-y-1 bg-transparent pt-4;
 }
 
 .card_content__title {

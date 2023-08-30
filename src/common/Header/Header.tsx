@@ -1,6 +1,7 @@
 import { FC, ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import Box from '@common/Box/Box';
 import Button from '@common/Button/Button';
 
 import styles from './Header.module.css';
@@ -15,9 +16,9 @@ const Header: FC<HeaderProps> = ({ children }) => {
 
   // const handleLogOut = () => {};
   return (
-    <div className={styles.header}>
-      <div className={styles.header_wrapper}>
-        <div className={styles.header_stepper}>
+    <Box className={styles.header}>
+      <Box className={styles.header_wrapper}>
+        <Box className={styles.header_stepper}>
           <Button onClick={() => navigate(-1)} className={styles.header_stepper__button}>
             &#60;
             {/* Icon arrow left */}
@@ -26,8 +27,8 @@ const Header: FC<HeaderProps> = ({ children }) => {
             &#62;
             {/* Icon arrow right */}
           </Button>
-        </div>
-        <div className={styles.header_mobile}>
+        </Box>
+        <Box className={styles.header_mobile}>
           <Button className={styles.header_mobile__button}>
             {/* Icon home */}
             Home
@@ -36,28 +37,24 @@ const Header: FC<HeaderProps> = ({ children }) => {
             {/* Icon search */}
             Search
           </Button>
-        </div>
-        <div className={styles.header_auth}>
+        </Box>
+        <Box className={styles.header_auth}>
           {/* <div>
             <Button className='bg-white text-black'>Premium</Button>
           </div>
           <div>
             <Button>Sign up</Button>
           </div> */}
-          <div>
-            <Button onClick={() => {}} className={styles.header_auth__signup}>
-              Sign up
-            </Button>
-          </div>
-          <div>
-            <Button onClick={() => {}} className={styles.header_auth__login}>
-              Sign in
-            </Button>
-          </div>
-        </div>
-      </div>
+          <Button onClick={() => {}} className={styles.header_auth__signup}>
+            Sign up
+          </Button>
+          <Button onClick={() => {}} className={styles.header_auth__login}>
+            Sign in
+          </Button>
+        </Box>
+      </Box>
       {children}
-    </div>
+    </Box>
   );
 };
 

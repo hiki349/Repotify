@@ -1,13 +1,13 @@
 .header {
-  @apply h-fit p-1;
+  @apply h-fit px-5 py-4;
 }
 
 .header_wrapper {
-  @apply mb-4 flex w-full items-center justify-between;
+  @apply mb-4 flex w-full flex-row items-center justify-between;
 }
 
 .header_stepper {
-  @apply hidden items-center gap-x-2 md:flex;
+  @apply hidden flex-row items-center gap-x-2 md:flex;
 }
 
 .header_stepper__button {
@@ -15,7 +15,7 @@
 }
 
 .header_mobile {
-  @apply flex items-center gap-x-2 md:hidden;
+  @apply flex flex-row items-center gap-x-2 md:hidden;
 }
 
 .header_mobile__button {
@@ -23,13 +23,13 @@
 }
 
 .header_auth {
-  @apply flex items-center justify-between gap-x-4;
+  @apply flex w-fit flex-row items-center justify-between gap-x-4;
 }
 
 .header_auth__signup {
-  @apply bg-transparent font-medium text-neutral-300 hover:text-white;
+  @apply w-max bg-transparent font-medium text-neutral-300 hover:text-white;
 }
 
 .header_auth__login {
-  @apply bg-white font-medium text-black;
+  @apply w-max bg-white font-medium text-black;
 }

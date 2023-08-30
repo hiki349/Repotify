@@ -11,8 +11,8 @@ interface SidebarProps {
 }
 
 const Sidebar: FC<SidebarProps> = ({ children }) => (
-  <div className={styles.Sidebar}>
-    <div className={styles.sidebar__container}>
+  <Box className={styles.sidebar}>
+    <Box className={styles.sidebar__container}>
       <Box className={styles.nav}>
         <CustomLink path='/'>
           Home
@@ -23,12 +23,13 @@ const Sidebar: FC<SidebarProps> = ({ children }) => (
           {/* Icon search */}
         </CustomLink>
       </Box>
-      <Box className={styles.library}>
-        <Library />
-      </Box>
-    </div>
-    <main className={styles.main}>{children}</main>
-  </div>
+      <Library />
+    </Box>
+
+    <main className={styles.main}>
+      <Box className={styles.main_wrapper}>{children}</Box>
+    </main>
+  </Box>
 );
 
 export default Sidebar;

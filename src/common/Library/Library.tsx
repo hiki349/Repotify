@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import Box from '@common/Box/Box';
 import Button from '@common/Button/Button';
 import CustomLink from '@common/CustomLink/CustomLink';
 
@@ -13,31 +14,31 @@ const Library: FC<LibraryProps> = () => {
   };
 
   return (
-    <div className={styles.library}>
-      <div className={styles.library_header}>
-        <div className={styles.library_header__container}>
+    <Box className={styles.library}>
+      <Box className={styles.library_header}>
+        <Box className={styles.library_header__container}>
           {/* Icon library */}
           <p className={styles.library_header__title}>Your Library</p>
-        </div>
+        </Box>
         <button onClick={onClick} className={styles.library_header__button}>
           +
         </button>
-      </div>
+      </Box>
       <section className={styles.library_body}>
         <main className={styles.library_main}>
-          <div className={styles.library_main__container}>
+          <Box className={styles.library_main__container}>
             <h1 className={styles.library_main__title}>Create your first playlist</h1>
             <p className={styles.library_main__text}>It`s easy, we`ll help you</p>
             <Button className={styles.library_main__button}>Create playlist</Button>
-          </div>
-          <div className={styles.library_main__container}>
+          </Box>
+          <Box className={styles.library_main__container}>
             <h1 className={styles.library_main__title}>Let`s find some podcasts to follow</h1>
             <p className={styles.library_main__text}>We`ll keep you updated on new episodes</p>
             <Button className={styles.library_main__button}>Browse podcasts</Button>
-          </div>
+          </Box>
         </main>
         <footer className={styles.library_footer}>
-          <div className={styles.library_footer__wrapper}>
+          <Box className={styles.library_footer__wrapper}>
             <CustomLink path='https://www.spotify.com/ua-en/legal/end-user-agreement/'>
               Legal
             </CustomLink>
@@ -54,14 +55,14 @@ const Library: FC<LibraryProps> = () => {
             <CustomLink path='https://www.spotify.com/ua-en/accessibility'>
               Accessability
             </CustomLink>
-          </div>
+          </Box>
           <Button className={styles.library_footer__button}>
             {/* <span>icon language</span> */}
             English
           </Button>
         </footer>
       </section>
-    </div>
+    </Box>
   );
 };
 

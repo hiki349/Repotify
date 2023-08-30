@@ -1,13 +1,13 @@
 .library {
-  @apply flex h-full flex-col;
+  @apply rounded-lg px-2;
 }
 
 .library_header {
-  @apply flex items-center justify-between px-5 pt-4;
+  @apply h-auto flex-row items-center justify-between px-5 pt-4;
 }
 
 .library_header__container {
-  @apply inline-flex items-center gap-x-2;
+  @apply inline-flex gap-x-2;
 }
 
 .library_header__title {
@@ -27,7 +27,7 @@
 }
 
 .library_main__container {
-  @apply flex flex-col gap-2 rounded-lg bg-neutral-700 px-5 py-4 text-white;
+  @apply h-auto gap-2 rounded-lg bg-neutral-700 px-5 py-4 text-white;
 }
 
 .library_main__title {
@@ -47,7 +47,7 @@
 }
 
 .library_footer__wrapper {
-  @apply flex flex-row flex-wrap gap-x-5 gap-y-2 py-6 text-[11px];
+  @apply flex h-auto flex-row flex-wrap gap-x-5 gap-y-2 py-6 text-[11px];
 }
 
 .library_footer__button {
