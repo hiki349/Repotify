@@ -17,7 +17,7 @@
     "paths": {
       "@common/*": ["./common/*"],
       "@pages/*": ["./pages/*"],
-      "@layouts": ["./layouts"],
+      "@layouts/*": ["./layouts/*"],
       "@utils/*": ["./utils/*"],
       "@static/*": ["./static/*"]
     },

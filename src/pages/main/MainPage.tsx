@@ -1,7 +1,7 @@
 import Box from '@common/Box/Box';
-import Card from '@pages/main/Card/Card';
-import Header from '@pages/main/Header/Header';
-import Sidebar from '@pages/main/Sidebar/Sidebar';
+import Card from '@common/Card/Card';
+import Header from '@layouts/Header/Header';
+import Sidebar from '@layouts/Sidebar/Sidebar';
 
 import styles from './MainPage.module.css';
 

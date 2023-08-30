@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import Box from '@common/Box/Box';
 import Button from '@common/Button/Button';
-import image from '@static/images/image-1.jpg';
+import image from '@static/images/song.jpg';
 
 import styles from './Card.module.css';
 
