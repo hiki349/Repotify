@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import Box from '@common/Box/Box';
 import CustomLink from '@common/CustomLink/CustomLink';
-import Library from '@common/Library/Library';
+import Library from '@pages/main/Library/Library';
 
 import styles from './Sidebar.module.css';
 
