@@ -1,11 +1,8 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
+
+import { BoxProps } from '../../../@types/box';
 
 import styles from './Box.module.css';
-
-interface BoxProps {
-  children: ReactNode;
-  className?: string;
-}
 
 export const Box: FC<BoxProps> = ({ children, className }) => (
   <div className={`${className} ${styles.box}`}>{children}</div>
