@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import { ButtonHTMLAttributes, FC } from 'react';
 
 import styles from './Button.module.css';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
 const Button: FC<ButtonProps> = ({ className, children, disabled, ...props }) => (
   <button className={`${className} ${styles.Button}`} disabled={disabled} {...props}>
