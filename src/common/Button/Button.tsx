@@ -9,6 +9,3 @@ export const Button: FC<ButtonProps> = ({ className, children, disabled, ...prop
     {children}
   </button>
 );
-
-Button.displayName = 'Button';
-// const Button: FC<ButtonProps> = () => <div className={styles.Button}>Button Component</div>;

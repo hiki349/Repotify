@@ -15,9 +15,9 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "@common/*": ["./common/*"],
-      "@pages/*": ["./pages/*"],
-      "@layouts/*": ["./layouts/*"],
+      "@common": ["./common"],
+      "@pages": ["./pages"],
+      "@layouts": ["./layouts"],
       "@utils/*": ["./utils/*"],
       "@static/*": ["./static/*"]
     },

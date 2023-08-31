@@ -1,15 +1,14 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 
-import { Box, CustomLink } from '@common/index';
-import Library from '@layouts/Sidebar/Library/Library';
+import { Box, CustomLink } from '@common';
+
+import { Library } from './Library/Library';
 
 import styles from './Sidebar.module.css';
 
-interface SidebarProps {
-  children?: ReactNode;
-}
+interface SidebarProps {}
 
-const Sidebar: FC<SidebarProps> = ({ children }) => (
+export const Sidebar: FC<SidebarProps> = () => (
   <Box className={styles.sidebar}>
     <Box className={styles.sidebar__container}>
       <Box className={styles.nav}>
@@ -25,10 +24,8 @@ const Sidebar: FC<SidebarProps> = ({ children }) => (
       <Library />
     </Box>
 
-    <main className={styles.main}>
+    {/* <main className={styles.main}>
       <Box className={styles.main_wrapper}>{children}</Box>
-    </main>
+    </main> */}
   </Box>
 );
-
-export default Sidebar;

@@ -1,19 +1,15 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Box, Button } from '@common/index';
+import { Box, Button, CustomLink } from '@common';
 
 import styles from './Header.module.css';
 
-interface HeaderProps {
-  children: ReactNode;
-  // className?: string;
-}
+interface HeaderProps {}
 
-const Header: FC<HeaderProps> = ({ children }) => {
+export const Header: FC<HeaderProps> = () => {
   const navigate = useNavigate();
 
-  // const handleLogOut = () => {};
   return (
     <Box className={styles.header}>
       <Box className={styles.header_wrapper}>
@@ -38,23 +34,14 @@ const Header: FC<HeaderProps> = ({ children }) => {
           </Button>
         </Box>
         <Box className={styles.header_auth}>
-          {/* <div>
-            <Button className='bg-white text-black'>Premium</Button>
-          </div>
-          <div>
-            <Button>Sign up</Button>
-          </div> */}
-          <Button onClick={() => {}} className={styles.header_auth__signup}>
+          <CustomLink className={styles.header_auth__signup} path=''>
             Sign up
-          </Button>
-          <Button onClick={() => {}} className={styles.header_auth__login}>
+          </CustomLink>
+          <CustomLink className={styles.header_auth__login} path=''>
             Sign in
-          </Button>
+          </CustomLink>
         </Box>
       </Box>
-      {children}
     </Box>
   );
 };
-
-export default Header;
