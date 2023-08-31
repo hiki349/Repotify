@@ -1,5 +1,4 @@
-import Box from '@common/Box/Box';
-import Card from '@common/Card/Card';
+import { Box, Card } from '@common/index';
 import Header from '@layouts/Header/Header';
 import Sidebar from '@layouts/Sidebar/Sidebar';
 
