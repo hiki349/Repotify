@@ -1,14 +1,13 @@
 import { FC } from 'react';
 
-import Box from '@common/Box/Box';
-import Button from '@common/Button/Button';
+import { Box, Button } from '@common/index';
 import image from '@static/images/song.jpg';
 
 import styles from './Card.module.css';
 
 interface CardProps {}
 
-const Card: FC<CardProps> = () => (
+export const Card: FC<CardProps> = () => (
   <Box className={`group ${styles.card} `}>
     <Box className={styles.card_image}>
       <img src={image} alt='song-1' />
@@ -26,5 +25,3 @@ const Card: FC<CardProps> = () => (
     </div>
   </Box>
 );
-
-export default Card;

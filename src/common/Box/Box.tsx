@@ -7,8 +7,6 @@ interface BoxProps {
   className?: string;
 }
 
-const Box: FC<BoxProps> = ({ children, className }) => (
+export const Box: FC<BoxProps> = ({ children, className }) => (
   <div className={`${className} ${styles.box}`}>{children}</div>
 );
-
-export default Box;

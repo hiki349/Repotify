@@ -1,8 +1,7 @@
 import { FC, ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Box from '@common/Box/Box';
-import Button from '@common/Button/Button';
+import { Box, Button } from '@common/index';
 
 import styles from './Header.module.css';
 

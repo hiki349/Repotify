@@ -1,7 +1,6 @@
 import { FC, ReactNode } from 'react';
 
-import Box from '@common/Box/Box';
-import CustomLink from '@common/CustomLink/CustomLink';
+import { Box, CustomLink } from '@common/index';
 import Library from '@layouts/Sidebar/Library/Library';
 
 import styles from './Sidebar.module.css';

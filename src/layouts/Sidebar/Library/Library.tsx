@@ -1,8 +1,6 @@
 import { FC } from 'react';
 
-import Box from '@common/Box/Box';
-import Button from '@common/Button/Button';
-import CustomLink from '@common/CustomLink/CustomLink';
+import { Box, Button, CustomLink } from '@common/index';
 
 import styles from './Library.module.css';
 

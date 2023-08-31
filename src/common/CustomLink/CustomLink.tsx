@@ -8,7 +8,7 @@ interface CustomLinkProps {
   path: string;
 }
 
-const CustomLink: FC<CustomLinkProps> = ({ children, path }) => (
+export const CustomLink: FC<CustomLinkProps> = ({ children, path }) => (
   <NavLink
     to={path}
     className={({ isActive }) => (isActive ? `text-white ${styles.customLink}` : styles.customLink)}
@@ -16,5 +16,3 @@ const CustomLink: FC<CustomLinkProps> = ({ children, path }) => (
     {children}
   </NavLink>
 );
-
-export default CustomLink;
