@@ -1,5 +1,4 @@
 import axios, { Method } from 'axios';
-import type { TTokenData, TRefreshRequestProps } from '../../../@types/api';
 
 export const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
@@ -31,7 +30,7 @@ api.interceptors.response.use(
     if (err.response.status === 400) {
       const res = await fetchDataToken();
       api.defaults.headers.Authorization = `${res.token_type} ${res.access_token}`;
-      return await refreshRequest(err.config);
+      return refreshRequest(err.config);
     }
   }
 );
