@@ -1,13 +1,9 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import styles from './CustomLink.module.css';
+import { CustomLinkProps } from '../../../@types/link';
 
-interface CustomLinkProps {
-  children: ReactNode;
-  path: string;
-  className?: string;
-}
+import styles from './CustomLink.module.css';
 
 export const CustomLink: FC<CustomLinkProps> = ({ children, path, className }) => (
   <NavLink

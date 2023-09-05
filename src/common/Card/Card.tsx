@@ -4,11 +4,7 @@ import { Box, Button } from '@common';
 
 import styles from './Card.module.css';
 
-interface CardProps {
-  image: string;
-  title: string;
-  description: string;
-}
+import { CardProps } from '../../../@types/card';
 
 export const Card: FC<CardProps> = ({ image, title, description }) => (
   <Box className={`group ${styles.card} `}>
