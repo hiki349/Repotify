@@ -1,6 +1,11 @@
 import { FC } from 'react';
 
-import { Box, Button, CustomLink } from '@common';
+import { Box, Button, ButtonImg, CustomLink } from '@common';
+import addIcon from '@static/icons/add.svg';
+import languageIcon from '@static/icons/language.svg';
+import libraryIcon from '@static/icons/library.svg';
+
+import { libraryLinks } from './data';
 
 import styles from './Library.module.css';
 
@@ -10,10 +15,12 @@ export const Library: FC<LibraryProps> = () => (
   <Box className={styles.library}>
     <Box className={styles.library_header}>
       <Box className={styles.library_header__container}>
-        {/* Icon library */}
+        <ButtonImg path={libraryIcon} alt='library' className={styles.header_icon} />
         <p className={styles.library_header__title}>Your Library</p>
       </Box>
-      <button className={styles.library_header__button}>+</button>
+      <button className={styles.library_header__button}>
+        <ButtonImg path={addIcon} alt='add' className={styles.header_icon__add} />
+      </button>
     </Box>
     <section className={styles.library_body}>
       <Box className={styles.library_main}>
@@ -30,23 +37,12 @@ export const Library: FC<LibraryProps> = () => (
       </Box>
       <Box className={styles.library_footer}>
         <Box className={styles.library_footer__wrapper}>
-          <CustomLink path='https://www.spotify.com/ua-en/legal/end-user-agreement/'>
-            Legal
-          </CustomLink>
-          <CustomLink path='https://www.spotify.com/ua-en/privacy'>Privacy Center</CustomLink>
-          <CustomLink path='https://www.spotify.com/ua-en/legal/privacy-policy/'>
-            Privacy Policy
-          </CustomLink>
-          <CustomLink path='https://www.spotify.com/ua-en/legal/cookies-policy/'>
-            Cookies
-          </CustomLink>
-          <CustomLink path='https://www.spotify.com/ua-en/legal/privacy-policy/#s3'>
-            About ads
-          </CustomLink>
-          <CustomLink path='https://www.spotify.com/ua-en/accessibility'>Accessability</CustomLink>
+          {libraryLinks.map((libraryLink) => (
+            <CustomLink path={libraryLink.path}>{libraryLink.name}</CustomLink>
+          ))}
         </Box>
         <Button className={styles.library_footer__button}>
-          {/* <span>icon language</span> */}
+          <ButtonImg path={languageIcon} alt='language' className={styles.footer_button__icon} />
           English
         </Button>
       </Box>
