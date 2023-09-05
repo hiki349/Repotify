@@ -1,5 +1,5 @@
 .header {
-  @apply h-fit px-5 py-4;
+  @apply absolute h-fit px-5 py-4;
 }
 
 .header_wrapper {
@@ -32,4 +32,8 @@
 
 .header_auth__login {
   @apply w-max bg-white font-medium text-black;
+}
+
+.stepper__icon {
+  @apply h-[16px] w-[16px] fill-white;
 }
