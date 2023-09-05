@@ -2,9 +2,9 @@ import { FC } from 'react';
 
 import { Box, Button } from '@common';
 
-import styles from './Card.module.css';
-
 import { CardProps } from '../../../@types/card';
+
+import styles from './Card.module.css';
 
 export const Card: FC<CardProps> = ({ image, title, description }) => (
   <Box className={`group ${styles.card} `}>

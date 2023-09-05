@@ -1,7 +1,11 @@
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Box, Button, CustomLink } from '@common';
+import { Box, Button, ButtonImg, CustomLink } from '@common';
+import leftArrowIcon from '@static/icons/chevron-left.svg';
+import rightArrowIcon from '@static/icons/chevron-right.svg';
+import homeIcon from '@static/icons/home.svg';
+import searchIcon from '@static/icons/search.svg';
 
 import styles from './Header.module.css';
 
@@ -15,22 +19,18 @@ export const Header: FC<HeaderProps> = () => {
       <Box className={styles.header_wrapper}>
         <Box className={styles.header_stepper}>
           <Button onClick={() => navigate(-1)} className={styles.header_stepper__button}>
-            &#60;
-            {/* Icon arrow left */}
+            <ButtonImg path={leftArrowIcon} alt='left arrow' className={styles.stepper__icon} />
           </Button>
           <Button onClick={() => navigate(1)} className={styles.header_stepper__button}>
-            &#62;
-            {/* Icon arrow right */}
+            <ButtonImg path={rightArrowIcon} alt='right arrow' className={styles.stepper__icon} />
           </Button>
         </Box>
         <Box className={styles.header_mobile}>
           <Button className={styles.header_mobile__button}>
-            {/* Icon home */}
-            Home
+            <ButtonImg path={homeIcon} alt='home' />
           </Button>
           <Button className={styles.header_mobile__button}>
-            {/* Icon search */}
-            Search
+            <ButtonImg path={searchIcon} alt='search' />
           </Button>
         </Box>
         <Box className={styles.header_auth}>
