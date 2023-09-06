@@ -5,13 +5,21 @@
   "testLibrary": "Testing Library",
   "component": {
     "default": {
+      "customTemplates": {
+        "component": "templates/default/TemplateName.tsx",
+        "style": "templates/default/TemplateName.module.css"
+      },
       "path": "src/common",
       "withLazy": false,
-      "withStory": false,
+      "withStory": true,
       "withStyle": true,
       "withTest": false
     },
     "page": {
+      "customTemplates": {
+        "component": "templates/page/TemplateName.tsx",
+        "style": "templates/page/TemplateName.module.css"
+      },
       "path": "src/pages",
       "withLazy": false,
       "withStory": false,

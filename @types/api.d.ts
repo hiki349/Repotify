@@ -1,5 +1,3 @@
-import axios from 'axios/index';
-
 type TTokenData = {
   access_token: string;
   token_type: string;
@@ -7,7 +5,7 @@ type TTokenData = {
 };
 
 type TRefreshRequestProps = {
-  method: keyof typeof axios;
+  method: keyof typeof import('axios');
   url: string;
   data?: any;
 };
