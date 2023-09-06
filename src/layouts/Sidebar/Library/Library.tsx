@@ -18,9 +18,7 @@ export const Library: FC<LibraryProps> = () => (
         <ButtonImg path={libraryIcon} alt='library' className={styles.header_icon} />
         <p className={styles.library_header__title}>Your Library</p>
       </Box>
-      <button className={styles.library_header__button}>
-        <ButtonImg path={addIcon} alt='add' className={styles.header_icon__add} />
-      </button>
+      <ButtonImg path={addIcon} alt='add' className={styles.library_header__button} />
     </Box>
     <section className={styles.library_body}>
       <Box className={styles.library_main}>
@@ -38,7 +36,9 @@ export const Library: FC<LibraryProps> = () => (
       <Box className={styles.library_footer}>
         <Box className={styles.library_footer__wrapper}>
           {libraryLinks.map((libraryLink) => (
-            <CustomLink path={libraryLink.path}>{libraryLink.name}</CustomLink>
+            <CustomLink path={libraryLink.path} key={libraryLink.name}>
+              {libraryLink.name}
+            </CustomLink>
           ))}
         </Box>
         <Button className={styles.library_footer__button}>
