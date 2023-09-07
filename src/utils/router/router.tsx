@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { BaseLayout } from '@layouts';
 import { MainPage } from '@pages';
+import { getCategoryPlaylist } from '@utils/api';
 
 export const router = createBrowserRouter([
   {
@@ -10,7 +11,8 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <MainPage />
+        element: <MainPage />,
+        loader: getCategoryPlaylist
       }
     ]
   },
