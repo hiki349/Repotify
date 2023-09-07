@@ -10,6 +10,10 @@
   @apply h-fit gap-y-4 overflow-y-auto rounded-lg px-5 py-4 !important;
 }
 
+.nav_button {
+  @apply h-5 w-5 bg-transparent p-0;
+}
+
 .library {
   @apply rounded-lg px-2;
 }

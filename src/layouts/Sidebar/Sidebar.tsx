@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Box, ButtonImg, CustomLink } from '@common';
+import { Box, Button, CustomLink } from '@common';
 import homeIcon from '@static/icons/home.svg';
 import searchIcon from '@static/icons/search.svg';
 
@@ -15,11 +15,11 @@ export const Sidebar: FC<SidebarProps> = () => (
     <Box className={styles.sidebar__container}>
       <Box className={styles.nav}>
         <CustomLink path='/'>
-          <ButtonImg path={homeIcon} alt='home' />
+          <Button startIcon={homeIcon} alt='home' className={styles.nav_button} />
           Home
         </CustomLink>
         <CustomLink path='/search'>
-          <ButtonImg path={searchIcon} alt='search' />
+          <Button startIcon={searchIcon} alt='search' className={styles.nav_button} />
           Search
         </CustomLink>
       </Box>

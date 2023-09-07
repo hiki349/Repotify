@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Box, Button, ButtonImg, CustomLink } from '@common';
+import { Box, Button, CustomLink } from '@common';
 import addIcon from '@static/icons/add.svg';
 import languageIcon from '@static/icons/language.svg';
 import libraryIcon from '@static/icons/library.svg';
@@ -15,10 +15,10 @@ export const Library: FC<LibraryProps> = () => (
   <Box className={styles.library}>
     <Box className={styles.library_header}>
       <Box className={styles.library_header__container}>
-        <ButtonImg path={libraryIcon} alt='library' className={styles.header_icon} />
+        <Button startIcon={libraryIcon} alt='library' className={styles.header_icon} />
         <p className={styles.library_header__title}>Your Library</p>
       </Box>
-      <ButtonImg path={addIcon} alt='add' className={styles.library_header__button} />
+      <Button startIcon={addIcon} alt='add' className={styles.library_header__button} />
     </Box>
     <section className={styles.library_body}>
       <Box className={styles.library_main}>
@@ -41,8 +41,12 @@ export const Library: FC<LibraryProps> = () => (
             </CustomLink>
           ))}
         </Box>
-        <Button className={styles.library_footer__button}>
-          <ButtonImg path={languageIcon} alt='language' className={styles.footer_button__icon} />
+        <Button
+          className={styles.library_footer__button}
+          startIcon={languageIcon}
+          alt='language'
+          // className={styles.footer_button__icon}
+        >
           English
         </Button>
       </Box>

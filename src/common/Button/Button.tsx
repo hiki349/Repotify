@@ -1,11 +1,19 @@
-import { ButtonHTMLAttributes, FC } from 'react';
+import { FC } from 'react';
+
+import { ButtonProps } from '../../../@types/button';
 
 import styles from './Button.module.css';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
-
-export const Button: FC<ButtonProps> = ({ className, children, disabled, ...props }) => (
-  <button className={`${className} ${styles.Button}`} disabled={disabled} {...props}>
+export const Button: FC<ButtonProps> = ({
+  className = '',
+  children,
+  disabled,
+  startIcon = '',
+  alt = '',
+  ...props
+}) => (
+  <button className={`${className} ${styles.button}`} disabled={disabled} {...props}>
+    {startIcon && <img src={startIcon} alt={alt} className={styles.button_img} />}
     {children}
   </button>
 );

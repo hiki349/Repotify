@@ -11,11 +11,7 @@
 }
 
 .header_icon {
-  @apply h-[20px] w-[20px];
-}
-
-.header_icon__add {
-  @apply h-[16px] w-[16px] align-middle;
+  @apply h-5 w-5 bg-transparent p-0;
 }
 
 .library_header__title {
@@ -23,7 +19,7 @@
 }
 
 .library_header__button {
-  @apply cursor-pointer items-center text-neutral-400 transition hover:text-white;
+  @apply cursor-pointer items-center bg-transparent text-neutral-400 transition hover:text-white;
 }
 
 .library_body {

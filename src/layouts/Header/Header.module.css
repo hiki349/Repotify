@@ -11,7 +11,7 @@
 }
 
 .header_stepper__button {
-  @apply flex h-5 w-5 items-center justify-center rounded-full bg-black p-4 text-white transition hover:opacity-75;
+  @apply flex h-[24px] w-[24px] items-center justify-center rounded-full bg-black fill-white p-1 text-white transition hover:opacity-75;
 }
 
 .header_mobile {
@@ -31,7 +31,7 @@
 }
 
 .header_auth__login {
-  @apply w-max bg-white font-medium text-black;
+  @apply w-max bg-white p-2 font-medium text-black;
 }
 
 .stepper__icon {
