@@ -7,7 +7,7 @@ import { CardProps } from '../../../@types/card';
 const meta: Meta<CardProps> = {
   title: 'Card',
   component: Card,
-  tags: ['autodoc']
+  tags: ['autodocs']
 };
 
 export default meta;

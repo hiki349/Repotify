@@ -7,7 +7,7 @@ import { ButtonProps } from '../../../@types/button';
 const meta: Meta<ButtonProps> = {
   title: 'Button',
   component: Button,
-  tags: ['autodoc']
+  tags: ['autodocs']
 };
 
 export default meta;

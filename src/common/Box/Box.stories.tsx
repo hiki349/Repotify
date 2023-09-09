@@ -6,7 +6,7 @@ import { BoxProps } from '../../../@types/box';
 const meta: Meta<BoxProps> = {
   title: 'Box',
   component: Box,
-  tags: ['autodoc']
+  tags: ['autodocs']
 };
 
 export default meta;
