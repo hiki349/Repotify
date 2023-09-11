@@ -3,5 +3,5 @@
 }
 
 .button_img {
-  @apply h-[20px] w-full;
+  @apply h-[20px] w-full min-w-min;
 }
