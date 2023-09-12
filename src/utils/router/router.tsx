@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import { BaseLayout } from '@layouts';
-import { MainPage } from '@pages';
-import { getCategoryPlaylist } from '@utils/api';
+import { MainPage, SearchPage } from '@pages';
+import { getCategoryPlaylist, getSeveralBrowseCategories } from '@utils/api';
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +13,17 @@ export const router = createBrowserRouter([
         index: true,
         element: <MainPage />,
         loader: getCategoryPlaylist
+      }
+    ]
+  },
+  {
+    path: '/search',
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <SearchPage />,
+        loader: getSeveralBrowseCategories
       }
     ]
   },
