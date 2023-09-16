@@ -1,9 +1,9 @@
 .header {
-  @apply absolute h-fit px-5 py-4;
+  @apply absolute left-0 top-0 h-fit rounded-t-lg px-5 py-4;
 }
 
 .header_wrapper {
-  @apply mb-4 flex w-full flex-row items-center justify-between;
+  @apply flex w-full flex-row items-center justify-between;
 }
 
 .header_stepper {
