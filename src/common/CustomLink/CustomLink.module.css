@@ -1,0 +1,3 @@
+.customLink {
+  @apply flex h-auto cursor-pointer flex-row items-center gap-x-4 truncate py-1 font-medium text-neutral-400 transition hover:text-white;
+}

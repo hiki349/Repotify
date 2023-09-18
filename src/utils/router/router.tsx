@@ -1,11 +1,31 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { MainPage } from '@pages';
+import { BaseLayout } from '@layouts';
+import { MainPage, SearchPage } from '@pages';
+import { getCategoryPlaylist, getSeveralBrowseCategories } from '@utils/api';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <MainPage />
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <MainPage />,
+        loader: getCategoryPlaylist
+      }
+    ]
+  },
+  {
+    path: '/search',
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <SearchPage />,
+        loader: getSeveralBrowseCategories
+      }
+    ]
   },
   {
     path: '/react',

@@ -1,0 +1,39 @@
+.header {
+  @apply absolute left-0 top-0 h-fit rounded-t-lg px-5 py-4;
+}
+
+.header_wrapper {
+  @apply flex w-full flex-row items-center justify-between;
+}
+
+.header_stepper {
+  @apply hidden flex-row items-center gap-x-2 md:flex;
+}
+
+.header_stepper__button {
+  @apply flex h-[24px] w-[24px] items-center justify-center rounded-full bg-black fill-white p-1 text-white transition hover:opacity-75;
+}
+
+.header_mobile {
+  @apply flex flex-row items-center gap-x-2 md:hidden;
+}
+
+.header_mobile__button {
+  @apply flex items-center justify-center rounded-full bg-white p-2 transition hover:opacity-75;
+}
+
+.header_auth {
+  @apply flex w-fit flex-row items-center justify-between gap-x-4;
+}
+
+.header_auth__signup {
+  @apply w-max bg-transparent font-medium text-neutral-300 hover:text-white;
+}
+
+.header_auth__login {
+  @apply w-max bg-white p-2 font-medium text-black;
+}
+
+.stepper__icon {
+  @apply h-[16px] w-[16px] fill-white;
+}

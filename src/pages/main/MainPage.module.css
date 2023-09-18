@@ -1,3 +1,7 @@
-.title {
-  @apply text-center text-4xl;
+.main_title {
+  @apply text-3xl font-semibold text-white;
+}
+
+.main_list {
+  @apply mt-4 grid h-fit grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-8;
 }

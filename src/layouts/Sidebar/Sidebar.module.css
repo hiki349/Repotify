@@ -1,0 +1,27 @@
+.sidebar {
+  @apply h-full w-min flex-row;
+}
+
+.sidebar__container {
+  @apply hidden h-full w-[300px] flex-col gap-y-2 bg-black p-2 md:flex;
+}
+
+.nav {
+  @apply h-fit gap-y-4 overflow-y-auto rounded-lg px-5 py-4 !important;
+}
+
+.nav_button {
+  @apply h-5 w-5 bg-transparent p-0;
+}
+
+.library {
+  @apply rounded-lg px-2;
+}
+
+.main {
+  @apply h-full flex-1 overflow-y-auto bg-black py-2 pr-2;
+}
+
+.main_wrapper {
+  @apply rounded-lg;
+}

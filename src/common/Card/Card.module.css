@@ -1,0 +1,27 @@
+.card {
+  @apply relative flex h-fit max-h-80 max-w-xs cursor-pointer flex-col items-center justify-center gap-x-4 overflow-hidden rounded-md bg-neutral-800 p-3 transition hover:bg-neutral-700;
+}
+
+.card_image {
+  @apply relative h-full w-full overflow-hidden rounded-md;
+}
+
+.card_content {
+  @apply flex h-auto w-full flex-col items-start gap-y-1 bg-transparent pt-4;
+}
+
+.card_content__title {
+  @apply w-full truncate font-semibold text-white;
+}
+
+.card_content__text {
+  @apply w-full truncate pb-4 text-sm text-neutral-400;
+}
+
+.card_action {
+  @apply absolute bottom-24 right-5;
+}
+
+.card_action__button {
+  @apply flex translate-x-0 translate-y-2 items-center justify-center rounded-full bg-green-500 p-4 opacity-0 drop-shadow-md transition hover:scale-100 group-hover:translate-y-0 group-hover:opacity-100;
+}
