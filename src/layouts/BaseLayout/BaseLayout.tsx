@@ -6,7 +6,7 @@ import { Header } from '../Header/Header';
 import { Player } from '../Player/Player';
 import { Sidebar } from '../Sidebar/Sidebar';
 
-import styles from './BaseLAyout.module.css';
+import styles from './BaseLayout.module.css';
 
 export const BaseLayout = () => (
   <>
