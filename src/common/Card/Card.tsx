@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { Box, Button } from '@common';
+import PlayIcon from '@static/icons/Play';
 
 import { CardProps } from '../../../@types/card';
 
@@ -19,7 +20,7 @@ export const Card: FC<CardProps> = ({ image, title, description }) => (
       <Button
         className={`${styles.card_action__button} group-hover:translate-y-0 group-hover:opacity-100`}
       >
-        &#9654;
+        <PlayIcon width={16} height={16} />
       </Button>
     </div>
   </Box>

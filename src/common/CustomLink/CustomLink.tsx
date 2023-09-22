@@ -5,7 +5,7 @@ import { CustomLinkProps } from '../../../@types/link';
 
 import styles from './CustomLink.module.css';
 
-export const CustomLink: FC<CustomLinkProps> = ({ children, path, className }) => (
+export const CustomLink: FC<CustomLinkProps> = ({ children, path, className = '' }) => (
   <NavLink
     to={path}
     className={({ isActive }) =>

@@ -8,12 +8,10 @@ export const Button: FC<ButtonProps> = ({
   className = '',
   children,
   disabled,
-  startIcon = '',
-  alt = '',
+  startIcon,
   ...props
 }) => (
   <button className={`${className} ${styles.button}`} disabled={disabled} {...props}>
-    {startIcon && <img src={startIcon} alt={alt} className={styles.button_img} />}
     {children}
   </button>
 );

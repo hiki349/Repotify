@@ -1,5 +1,4 @@
 import { Button } from '@common';
-import libraryIcon from '@static/icons/library.svg';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { ButtonProps } from '../../../@types/button';
@@ -20,6 +19,6 @@ export const BaseButton: StoryObj<ButtonProps> = {
 
 export const ImageButton: StoryObj<ButtonProps> = {
   args: {
-    startIcon: `${libraryIcon}`
+    // startIcon: `${libraryIcon}`
   }
 };
