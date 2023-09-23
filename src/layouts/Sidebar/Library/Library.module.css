@@ -63,11 +63,11 @@
 }
 
 .modal_title {
-  @apply text-2xl font-bold
+  @apply text-2xl font-bold;
 }
 
 .modal_desc {
-  @apply text-base mt-2
+  @apply mt-2 text-base;
 }
 
 .modal_item_title {
