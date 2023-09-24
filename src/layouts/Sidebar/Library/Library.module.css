@@ -61,19 +61,3 @@
 .footer_button__icon {
   @apply h-[16px] w-[16px];
 }
-
-.modal_title {
-  @apply text-2xl font-bold;
-}
-
-.modal_desc {
-  @apply mt-2 text-base;
-}
-
-.modal_item_title {
-  @apply text-base;
-}
-
-.modal_item_desc {
-  @apply text-base text-gray-400;
-}

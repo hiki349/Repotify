@@ -1,0 +1,11 @@
+.language {
+  @apply w-56 cursor-pointer p-4 hover:bg-neutral-700;
+}
+
+.language_title {
+  @apply text-base;
+}
+
+.language_desc {
+  @apply text-base text-gray-400;
+}

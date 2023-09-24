@@ -1,10 +1,11 @@
 import { FC, useState } from 'react';
 
-import { Box, Button, CustomLink, ModalContainer, Typography } from '@common';
+import { Box, Button, CustomLink } from '@common';
 import addIcon from '@static/icons/add.svg';
-import closeIcon from '@static/icons/close.svg';
 import languageIcon from '@static/icons/language.svg';
 import libraryIcon from '@static/icons/library.svg';
+
+import { LanguageModal } from '../components/languageModal';
 
 import { libraryLinks } from './data';
 
@@ -54,40 +55,7 @@ export const Library: FC<LibraryProps> = () => {
           >
             English
           </Button>
-          {isModalOpen && (
-            <ModalContainer onClose={() => setIsModalOpen(false)}>
-              <div className='w-1/2 rounded-xl bg-neutral-800'>
-                <div className='flex items-start justify-between border-b-2 border-neutral-700 px-6 py-4'>
-                  <div className=''>
-                    <Typography variable='h4' style={styles.modal_title}>
-                      Choose a language
-                    </Typography>
-                    <Typography variable='h6' style={styles.modal_desc}>
-                      This updates what you read on open.spotify.com
-                    </Typography>
-                  </div>
-                  <Button startIcon={closeIcon} onClick={() => setIsModalOpen(false)} />
-                </div>
-                <div className='flex max-h-96 flex-wrap justify-start overflow-y-scroll pl-6'>
-                  {new Array(50).fill(10).map((_, i) => (
-                    <div
-                      key={i}
-                      onClick={() => setIsModalOpen(false)}
-                      aria-hidden='true'
-                      className='w-56 cursor-pointer p-4 hover:bg-neutral-700'
-                    >
-                      <Typography variable='h6' style={styles.modal_item_title}>
-                        English
-                      </Typography>
-                      <Typography variable='span' style={styles.modal_item_desc}>
-                        English
-                      </Typography>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </ModalContainer>
-          )}
+          {isModalOpen && <LanguageModal setIsOpen={setIsModalOpen} />}
         </Box>
       </section>
     </Box>
