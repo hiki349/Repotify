@@ -2,6 +2,7 @@ import { Dispatch, FC } from 'react';
 
 import { Button, ModalContainer, Typography } from '@common';
 import closeIcon from '@static/icons/close.svg';
+import { useIntl } from '@utils/hooks';
 
 import { LanguageItem } from '../languageItem';
 
@@ -12,7 +13,10 @@ interface LanguageModalProps {
 }
 
 export const LanguageModal: FC<LanguageModalProps> = ({ setIsOpen }) => {
-  const selectLanguage = () => {
+  const { setLocale } = useIntl();
+
+  const selectLanguage = (lang: string) => {
+    setLocale!(lang);
     setIsOpen(false);
   };
 
@@ -31,8 +35,12 @@ export const LanguageModal: FC<LanguageModalProps> = ({ setIsOpen }) => {
           <Button startIcon={closeIcon} onClick={() => setIsOpen(false)} />
         </div>
         <div className={styles.modal_languagesList}>
-          {new Array(50).fill('English').map((language, i) => (
-            <LanguageItem key={i} selectLanguage={selectLanguage} language={language} />
+          {new Array(50).fill({ title: 'English', code: 'en' }).map((language, i) => (
+            <LanguageItem
+              key={i}
+              selectLanguage={(lang) => selectLanguage(lang)}
+              language={language}
+            />
           ))}
         </div>
       </div>
