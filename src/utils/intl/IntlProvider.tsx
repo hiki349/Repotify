@@ -11,7 +11,7 @@ interface IntlProviderProps {
   children: ReactNode;
 }
 
-export const IntlProvider: FC<IntlProviderProps> = ( {children }) => {
+export const IntlProvider: FC<IntlProviderProps> = ({ children }) => {
   const [value, setValue] = useState(window.navigator.language);
 
   const contextValue = useMemo(() => ({ locale: value, setLocale: setValue }), [value]);

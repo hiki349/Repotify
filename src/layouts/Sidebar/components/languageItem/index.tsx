@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 
 interface LanguageItemProps {
   selectLanguage: (lang: string) => void;
-  language: {title: string, code: string};
+  language: { title: string; code: string };
 }
 
 export const LanguageItem: FC<LanguageItemProps> = ({ selectLanguage, language }) => (
