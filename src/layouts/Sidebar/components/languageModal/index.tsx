@@ -1,8 +1,8 @@
 import { Dispatch, FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button, ModalContainer, Typography } from '@common';
 import closeIcon from '@static/icons/close.svg';
-import { useIntl } from '@utils/hooks';
 
 import { LanguageItem } from '../languageItem';
 
@@ -13,10 +13,10 @@ interface LanguageModalProps {
 }
 
 export const LanguageModal: FC<LanguageModalProps> = ({ setIsOpen }) => {
-  const { setLocale } = useIntl();
+  const { i18n } = useTranslation();
 
-  const selectLanguage = (lang: string) => {
-    setLocale!(lang);
+  const selectLanguage = (locale: string) => {
+    i18n.changeLanguage(locale);
     setIsOpen(false);
   };
 
@@ -38,7 +38,7 @@ export const LanguageModal: FC<LanguageModalProps> = ({ setIsOpen }) => {
           {new Array(50).fill({ title: 'English', code: 'en' }).map((language, i) => (
             <LanguageItem
               key={i}
-              selectLanguage={(lang) => selectLanguage(lang)}
+              selectLanguage={(code) => selectLanguage(code)}
               language={language}
             />
           ))}

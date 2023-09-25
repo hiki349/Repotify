@@ -1,10 +1,10 @@
 import { FC, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Box, Button, CustomLink } from '@common';
 import addIcon from '@static/icons/add.svg';
 import languageIcon from '@static/icons/language.svg';
 import libraryIcon from '@static/icons/library.svg';
-import { useIntl, useTranslate } from '@utils/hooks';
 
 import { LanguageModal } from '../components/languageModal';
 
@@ -16,8 +16,7 @@ interface LibraryProps {}
 
 export const Library: FC<LibraryProps> = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { locale } = useIntl();
-  const { translate } = useTranslate(locale!);
+  const { i18n } = useTranslation();
 
   return (
     <Box className={styles.library}>
@@ -56,7 +55,7 @@ export const Library: FC<LibraryProps> = () => {
             onClick={() => setIsModalOpen(true)}
             // className={styles.footer_button__icon}
           >
-            {translate('language')}
+            {i18n.t('language')}
           </Button>
           {isModalOpen && <LanguageModal setIsOpen={setIsModalOpen} />}
         </Box>
