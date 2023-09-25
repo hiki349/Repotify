@@ -1,0 +1,19 @@
+.modal {
+  @apply w-1/2 rounded-xl bg-neutral-800;
+}
+
+.modal_header {
+  @apply flex items-start justify-between border-b-2 border-neutral-700 px-6 py-4;
+}
+
+.modal_title {
+  @apply text-2xl font-bold;
+}
+
+.modal_desc {
+  @apply mt-2 text-base;
+}
+
+.modal_languagesList {
+  @apply flex max-h-96 flex-wrap justify-start overflow-y-scroll pl-6;
+}
