@@ -2,7 +2,18 @@ import axios, { Method } from 'axios';
 
 import type { TRefreshRequestProps, TTokenData } from '../../../@types/api';
 
-const fetchDataToken = async (): Promise<TTokenData> => {
+const createApi = () => (
+    axios.create({
+    baseURL: import.meta.env.VITE_API_URL,
+    headers: {
+      Authorization: localStorage.getItem('token') ?? ''
+    }
+  })
+)
+// eslint-disable-next-line import/no-mutable-exports
+export let api = createApi()
+
+export const fetchDataToken = async (): Promise<TTokenData> => {
   const data = await axios.post(
     import.meta.env.VITE_API_AUTH_URL,
     new URLSearchParams({
@@ -11,26 +22,9 @@ const fetchDataToken = async (): Promise<TTokenData> => {
       client_secret: import.meta.env.VITE_CLIENT_SECRET
     })
   );
+
   return data.data;
 };
-
-const getAuthorization = async () => {
-  const token = localStorage.getItem('token');
-  if (token) return token
-  
-  const res = await fetchDataToken();
-  const newToken = `${res.token_type} ${res.access_token}`
-
-  localStorage.setItem('token', newToken);
-  return newToken;
-}
-
-export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
-  headers: {
-    Authorization: await getAuthorization()
-  }
-});
 
 const refreshRequest = async (config: TRefreshRequestProps) => {
   const { method, url, data } = config;
@@ -44,6 +38,8 @@ api.interceptors.response.use(
     if (err.response.status === 400) {
       const res = await fetchDataToken();
       localStorage.setItem('token', `${res.token_type} ${res.access_token}`);
+
+      api = createApi()
 
       return refreshRequest(err.config);
     }
