@@ -2,13 +2,6 @@ import axios, { Method } from 'axios';
 
 import type { TRefreshRequestProps, TTokenData } from '../../../@types/api';
 
-export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
-  headers: {
-    Authorization: ''
-  }
-});
-
 const fetchDataToken = async (): Promise<TTokenData> => {
   const data = await axios.post(
     import.meta.env.VITE_API_AUTH_URL,
@@ -21,17 +14,37 @@ const fetchDataToken = async (): Promise<TTokenData> => {
   return data.data;
 };
 
+const getAuthorization = async () => {
+  const token = localStorage.getItem('token');
+  if (token) return token
+  
+  const res = await fetchDataToken();
+  const newToken = `${res.token_type} ${res.access_token}`
+
+  localStorage.setItem('token', newToken);
+  return newToken;
+}
+
+export const api = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+  headers: {
+    Authorization: await getAuthorization()
+  }
+});
+
 const refreshRequest = async (config: TRefreshRequestProps) => {
   const { method, url, data } = config;
   const res = await api.request({ method: method as Method, url, data });
   return res.data;
 };
+
 api.interceptors.response.use(
   (res) => res.data,
   async (err) => {
     if (err.response.status === 400) {
       const res = await fetchDataToken();
-      api.defaults.headers.Authorization = `${res.token_type} ${res.access_token}`;
+      localStorage.setItem('token', `${res.token_type} ${res.access_token}`);
+
       return refreshRequest(err.config);
     }
   }
