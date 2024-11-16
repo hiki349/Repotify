@@ -35,7 +35,7 @@ const refreshRequest = async (config: TRefreshRequestProps) => {
 api.interceptors.response.use(
   (res) => res.data,
   async (err) => {
-    if (err.response.status === 400) {
+    if (err .response.status === 400 || err.response.status === 401) {
       const res = await fetchDataToken();
       localStorage.setItem('token', `${res.token_type} ${res.access_token}`);
 
